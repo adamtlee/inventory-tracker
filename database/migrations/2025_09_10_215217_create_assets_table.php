@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('belongs_to'); // Department or team
             $table->enum('condition', ['Excellent', 'Good', 'Fair', 'Worn', 'Damaged', 'Out of Service']);
             $table->text('comments')->nullable(); // Permanent notes
-            $table->foreignId('location_id')->nullable()->constrained()->onDelete('set null');
+            $table->unsignedBigInteger('location_id')->nullable();
             $table->timestamps();
         });
     }

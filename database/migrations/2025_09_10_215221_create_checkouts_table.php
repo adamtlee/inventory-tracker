@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('checkouts', function (Blueprint $table) {
             $table->id();
             $table->string('checkout_id')->unique(); // Unique ID for each transaction
-            $table->foreignId('asset_id')->constrained('assets')->onDelete('cascade');
-            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            $table->unsignedBigInteger('asset_id');
+            $table->unsignedBigInteger('user_id');
             $table->timestamp('date_checked_out');
             $table->string('checked_out_by'); // Person who took the item
             $table->timestamp('date_returned')->nullable(); // Empty if still out
