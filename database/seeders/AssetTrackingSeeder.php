@@ -17,6 +17,7 @@ class AssetTrackingSeeder extends Seeder
     {
         // Create sample users
         $users = [
+            ['name' => 'Admin User', 'email' => 'admin@example.com'],
             ['name' => 'John Smith', 'email' => 'john@example.com'],
             ['name' => 'Jane Doe', 'email' => 'jane@example.com'],
             ['name' => 'Mike Johnson', 'email' => 'mike@example.com'],
