@@ -30,6 +30,7 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->loginRouteSlug('login')
+            ->brandName('Inventory Tracker')
             ->colors([
                 'primary' => Color::Amber,
             ])
